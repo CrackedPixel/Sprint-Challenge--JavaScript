@@ -6,34 +6,73 @@
   object name, diet, weight, length, period
 */
 
+
+console.log("#############");
+console.log("## Objects ##");
+console.log("#############");
+
+function Dino(data) {
+  this.name = data.name;
+  this.diet = data.diet;
+  this.weight = data.weight;
+  this.length = data.height;
+  this.era = data.era;
+}
+
+
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceous
-
+const TRex = new Dino({
+  name: "tyrannosaurus",
+  diet: "carnivorous",
+  weight: "7000kg",
+  length: "12m",
+  era: "Late Cretaceous"
+});
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
-
+const Stego = new Dino({
+  name: "stegosaurus",
+  diet: "herbivorous",
+  weight: "2000kg",
+  length: "9m",
+  era: "Late Jurassic"
+})
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceous
-
+const Raptor = new Dino({
+  name: "velociraptor",
+  diet: "carnivorous",
+  weight: "15kg",
+  length: "1.8m",
+  era: "Late Cretaceous"
+})
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
-console.log();
+console.log(TRex.weight);
 
 // What was the diet of a velociraptor?
-console.log();
+console.log(Raptor.diet);
 
 // How long was a stegosaurus?
-console.log();
+console.log(Stego.length);
 
 // What time period did tyrannosaurus live in?
-console.log();
+console.log(TRex.era);
 
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-console.log();
+TRex.roar = function(){
+  return "RAWERSRARARWERSARARARRRR!";
+};
+console.log(TRex.roar());
 
 
 // ==== Arrays ====
 
 // Given an array of college graduates.  Complete the following requests using any array method you like
+
+console.log("############");
+console.log("## Arrays ##");
+console.log("############");
 
 const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern State College","email":"ctorry0@macromedia.com"},
 {"id":2,"first_name":"Saundra","university":"The School of the Art Institute of Chicago","email":"swhal1@state.gov"},
